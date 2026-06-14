@@ -880,38 +880,38 @@ def main():
                 comparison_results["Positional Time (ms)"].append(f"{t2*1000:.4f}")
             st.dataframe(pd.DataFrame(comparison_results), use_container_width=True)
 
-            # Analysis
-            st.markdown("---")
-            st.markdown("### 📝 Analysis & Inference")
+            # # Analysis
+            # st.markdown("---")
+            # st.markdown("### 📝 Analysis & Inference")
 
-            st.markdown("#### ⚠️ Cases Where Biword Index Gives False Positives")
-            st.markdown("""
-            For phrases with **3 or more words**, the biword index can produce false positives:
+            # st.markdown("#### ⚠️ Cases Where Biword Index Gives False Positives")
+            # st.markdown("""
+            # For phrases with **3 or more words**, the biword index can produce false positives:
             
-            **Example:** Query = `"information retrieval system"`
-            - Biword index checks: `"information retrieval"` ∈ doc **AND** `"retrieval system"` ∈ doc
-            - A document containing *"information retrieval is complex"* and later *"the retrieval system works"* 
-              would match BOTH biwords, but the exact phrase `"information retrieval system"` does NOT exist.
-            - The biwords are satisfied independently at **different positions**, creating a false positive.
+            # **Example:** Query = `"information retrieval system"`
+            # - Biword index checks: `"information retrieval"` ∈ doc **AND** `"retrieval system"` ∈ doc
+            # - A document containing *"information retrieval is complex"* and later *"the retrieval system works"* 
+            #   would match BOTH biwords, but the exact phrase `"information retrieval system"` does NOT exist.
+            # - The biwords are satisfied independently at **different positions**, creating a false positive.
             
-            **Key Issue:** Biword index does NOT verify that consecutive biwords overlap at the correct positions.
-            """)
+            # **Key Issue:** Biword index does NOT verify that consecutive biwords overlap at the correct positions.
+            # """)
 
-            st.markdown("#### ✅ Why Positional Index Gives More Accurate Results")
-            st.markdown("""
-            The positional index guarantees **exact phrase matching** because:
+            # st.markdown("#### ✅ Why Positional Index Gives More Accurate Results")
+            # st.markdown("""
+            # The positional index guarantees **exact phrase matching** because:
             
-            1. It stores the **exact position** of every term in every document
-            2. For phrase `"information retrieval system"`, it verifies:
-               - `"information"` at position **p**
-               - `"retrieval"` at position **p+1** 
-               - `"system"` at position **p+2**
-            3. Only documents where terms appear in **exact consecutive sequence** are returned
-            4. Additional benefit: Supports **proximity queries** (terms within k positions)
+            # 1. It stores the **exact position** of every term in every document
+            # 2. For phrase `"information retrieval system"`, it verifies:
+            #    - `"information"` at position **p**
+            #    - `"retrieval"` at position **p+1** 
+            #    - `"system"` at position **p+2**
+            # 3. Only documents where terms appear in **exact consecutive sequence** are returned
+            # 4. Additional benefit: Supports **proximity queries** (terms within k positions)
             
-            **Trade-off:** Positional index requires more storage (position lists per term per doc), 
-            but provides zero false positives for phrase queries.
-            """)
+            # **Trade-off:** Positional index requires more storage (position lists per term per doc), 
+            # but provides zero false positives for phrase queries.
+            # """)
 
             # Show false positives if any
             if biword_results != positional_results:
@@ -1033,32 +1033,32 @@ def main():
             })
             st.table(summary)
 
-            # Inference
-            st.markdown("### 📝 Inference")
-            if avg_btree_comp <= avg_bst_comp:
-                st.success(f"""
-                📌 **B-Tree outperforms BST** for dictionary search in this experiment:
-                - B-Tree avg comparisons: **{avg_btree_comp:.2f}** vs BST: **{avg_bst_comp:.2f}**
-                - B-Tree height: **{btree.get_height()}** vs BST height: **{bst.get_height()}**
-                - B-Tree won in **{btree_wins}/{len(queries)}** queries
+            # # Inference
+            # st.markdown("### 📝 Inference")
+            # if avg_btree_comp <= avg_bst_comp:
+            #     st.success(f"""
+            #     📌 **B-Tree outperforms BST** for dictionary search in this experiment:
+            #     - B-Tree avg comparisons: **{avg_btree_comp:.2f}** vs BST: **{avg_bst_comp:.2f}**
+            #     - B-Tree height: **{btree.get_height()}** vs BST height: **{bst.get_height()}**
+            #     - B-Tree won in **{btree_wins}/{len(queries)}** queries
                 
-                **Reason:** B-Tree's higher branching factor (up to 2t-1 = 5 keys per node) creates a shallower tree, 
-                requiring fewer comparisons. B-Trees maintain guaranteed balance (all leaves at same level), 
-                while BSTs can become skewed. B-Trees are O(log_t n) vs BST's O(log_2 n) best case / O(n) worst case.
+            #     **Reason:** B-Tree's higher branching factor (up to 2t-1 = 5 keys per node) creates a shallower tree, 
+            #     requiring fewer comparisons. B-Trees maintain guaranteed balance (all leaves at same level), 
+            #     while BSTs can become skewed. B-Trees are O(log_t n) vs BST's O(log_2 n) best case / O(n) worst case.
                 
-                **For large-scale IR systems**, B-Trees are preferred because they minimize disk I/O operations 
-                due to their high fanout and shallow depth.
-                """)
-            else:
-                st.info(f"""
-                📌 **BST performs comparably** for this small dictionary ({len(vocabulary)} terms):
-                - BST avg comparisons: **{avg_bst_comp:.2f}** vs B-Tree: **{avg_btree_comp:.2f}**
+            #     **For large-scale IR systems**, B-Trees are preferred because they minimize disk I/O operations 
+            #     due to their high fanout and shallow depth.
+            #     """)
+            # else:
+            #     st.info(f"""
+            #     📌 **BST performs comparably** for this small dictionary ({len(vocabulary)} terms):
+            #     - BST avg comparisons: **{avg_bst_comp:.2f}** vs B-Tree: **{avg_btree_comp:.2f}**
                 
-                However, **B-Trees are still preferred for large-scale systems** because:
-                - They guarantee O(log_t n) worst case (BST can degrade to O(n))
-                - Better cache locality (multiple keys per node)
-                - Optimized for disk-based storage in real IR systems
-                """)
+            #     However, **B-Trees are still preferred for large-scale systems** because:
+            #     - They guarantee O(log_t n) worst case (BST can degrade to O(n))
+            #     - Better cache locality (multiple keys per node)
+            #     - Optimized for disk-based storage in real IR systems
+            #     """)
 
     # ================================================================
     # SECTION F: TOLERANT RETRIEVAL
@@ -1162,17 +1162,7 @@ def main():
                 st.markdown("#### Dynamic Programming Matrix")
                 cols = [''] + list(word2)
                 rows = [''] + list(word1)
-                # Make column names unique (pyarrow requires unique columns)
-                unique_cols = []
-                col_counts = {}
-                for c in cols:
-                    if c in col_counts:
-                        col_counts[c] += 1
-                        unique_cols.append(c + '\u200b' * col_counts[c])
-                    else:
-                        col_counts[c] = 0
-                        unique_cols.append(c)
-                df = pd.DataFrame(matrix, index=rows, columns=unique_cols)
+                df = pd.DataFrame(matrix, index=rows, columns=cols)
                 st.dataframe(df, use_container_width=True)
 
                 st.markdown("""
