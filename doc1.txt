@@ -1,0 +1,1 @@
+Information retrieval is the activity of obtaining information system resources relevant to an information need. Searches can be based on full-text or other content-based indexing. Information retrieval is the science of searching for information in a document, searching for documents themselves, and also searching for the metadata that describes data.
