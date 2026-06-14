@@ -1,0 +1,1 @@
+Data mining is the process of discovering patterns in large data sets. It involves methods at the intersection of machine learning, statistics, and database systems. Data mining is an interdisciplinary subfield of computer science and statistics.

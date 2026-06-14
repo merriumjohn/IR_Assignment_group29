@@ -1,0 +1,1 @@
+Boolean retrieval model is a model for information retrieval in which we can pose any query in the form of a Boolean expression of terms. The model views each document as just a set of words. Boolean retrieval is simple and efficient for exact matching.

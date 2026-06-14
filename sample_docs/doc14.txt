@@ -1,0 +1,1 @@
+Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. Large cloud services often have functions distributed over multiple locations, each of which is a data center. Cloud computing relies on sharing of resources to achieve coherence and economies of scale.

@@ -1,0 +1,1 @@
+Tolerant retrieval deals with handling spelling mistakes and variations in user queries. Edit distance and phonetic correction are common techniques used in spell-checking and query suggestion. Wildcard queries and k-gram indexes also support tolerant retrieval mechanisms.

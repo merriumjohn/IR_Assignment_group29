@@ -1,0 +1,1 @@
+Index compression techniques reduce the space required to store the inverted index. Common methods include gap encoding, variable byte codes, and gamma codes for efficient storage. Compression is essential for managing large-scale information retrieval systems.

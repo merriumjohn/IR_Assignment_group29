@@ -1,0 +1,1 @@
+An inverted index is a database index storing a mapping from content to its locations in a document or set of documents. It is the most popular data structure used in document retrieval systems. The inverted index allows fast full-text searches at the cost of increased processing.

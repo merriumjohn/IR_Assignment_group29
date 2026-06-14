@@ -1,0 +1,1 @@
+Natural language processing is a subfield of linguistics and computer science. It deals with the interactions between computers and human language. NLP techniques are used in machine translation, text-mining applications, and information extraction from unstructured data.

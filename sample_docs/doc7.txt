@@ -1,0 +1,1 @@
+Text preprocessing involves several steps like tokenization, stop-word removal, stemming, and lemmatization. These steps help in normalizing the text for better information retrieval performance. Preprocessing is a critical first step in any text analysis pipeline.

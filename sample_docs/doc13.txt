@@ -1,0 +1,1 @@
+A database management system is a software application that interacts with end-users, other applications, and the database itself to capture and analyze data. A general-purpose DBMS allows the definition, creation, querying, update, and administration of databases. Well-known DBMSs include MySQL, PostgreSQL, MongoDB, Microsoft SQL Server, and Oracle Database.
