@@ -224,27 +224,44 @@ The application will open at `http://localhost:8501`
 
 ---
 
-## 7. Screenshots
+## 7. Screenshots and Recording
 
-*(Screenshots from live execution on Virtual Lab should be added below)*
+Section A: Documents uploaded and visible
+![Section A: Documents uploaded and visible](image-16.png)
+Section B: Preprocessing steps output
+![Section B: Preprocessing steps output](image.png)
+Section B: Preprocessing steps output
+![Section B: Preprocessing steps output1](image-1.png)
+Section B: Preprocessing steps output
+![Section B: Preprocessing steps output](image-2.png)
+Section C: Stemming vs Lemmatization comparison table
+![Section C: Stemming vs Lemmatization comparison table](image-4.png)
+Section C: Cosine similarity scores
+![Section C: Cosine similarity scores](image-3.png)
+Section D: Biword index index representation
+![Section D: Biword index index representation](image-6.png)
+Section D: Positional index representation
+![Section D: Positional index representation](image-7.png)
+Section D: Phrase query results comparison
+![Section D: Phrase query results comparison](image-5.png)
+Section E: BST vs B-Tree experimental results table
+![Section E: BST vs B-Tree experimental results table](image-9.png)
+Section E: Summary statistics
+![Section E: Summary statistics](image-8.png)
+Section F: Wildcard query results
+![Section F: Wildcard query results](image-10.png)
+Section F: Spelling correction results
+![Section F: Spelling correction results](image-11.png)
+ection F: Edit distance matrix
+![Section F: Edit distance matrix](image-12.png)
+Section F: K-gram index display
+![Section F: K-gram index display](image-13.png)
+Section F: Soundex phonetic matching
+![Section F: Soundex phonetic matching](image-14.png)
+Section G: Inference and discussion page
+![Section G: Inference and discussion page](image-15.png)
 
-### Screenshot Checklist:
-- [ ] Section A: Documents uploaded and visible
-- [ ] Section B: Preprocessing steps output
-- [ ] Section B: Inverted index table
-- [ ] Section C: Stemming vs Lemmatization comparison table
-- [ ] Section C: Cosine similarity scores
-- [ ] Section D: Biword index representation
-- [ ] Section D: Positional index representation
-- [ ] Section D: Phrase query results comparison
-- [ ] Section E: BST vs B-Tree experimental results table
-- [ ] Section E: Summary statistics
-- [ ] Section F: Wildcard query results
-- [ ] Section F: Edit distance matrix
-- [ ] Section F: Spelling correction results
-- [ ] Section F: K-gram index display
-- [ ] Section F: Soundex phonetic matching
-- [ ] Section G: Inference and discussion page
+[Screen Recording](https://wilpbitspilaniacin0-my.sharepoint.com/:v:/g/personal/2024dc04258_wilp_bits-pilani_ac_in/IQBBR4e3rkMiRZ6r7q_p-xkyASutfeUxh1kcKSpLAONCmhQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=94lFBV) 
 
 ---
 
