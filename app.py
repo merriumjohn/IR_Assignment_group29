@@ -1162,7 +1162,16 @@ def main():
                 st.markdown("#### Dynamic Programming Matrix")
                 cols = [''] + list(word2)
                 rows = [''] + list(word1)
-                df = pd.DataFrame(matrix, index=rows, columns=cols)
+                unique_cols = []
+                col_counts = {}
+                for col in cols:
+                    if col in col_counts:
+                        col_counts[col] += 1
+                        unique_cols.append(col + '\u200b' * col_counts[col])
+                    else:
+                        col_counts[col] = 0
+                        unique_cols.append(col)
+                df = pd.DataFrame(matrix, index=rows, columns=unique_cols)
                 st.dataframe(df, use_container_width=True)
 
                 st.markdown("""
