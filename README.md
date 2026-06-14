@@ -12,7 +12,23 @@ An end-to-end Information Retrieval system built with Streamlit demonstrating:
 - Dictionary search (BST vs B-Tree) with performance benchmarking
 - Tolerant retrieval (Wildcard, Edit Distance, K-gram, Soundex)
 
-## Prerequisites
+## Live Deployment
+
+The application is deployed and accessible online:
+
+🔗 **Live App:** [https://irassignmentgroup29.streamlit.app/](https://irassignmentgroup29.streamlit.app/)
+
+- **Hosted on:** Streamlit Community Cloud
+- **Source Repository:** [github.com/merriumjohn](https://github.com/merriumjohn)
+- **Deployment Account:** merriumjohn@gmail.com
+
+No installation required — simply open the link above to use the application.
+
+---
+
+## Local Setup
+
+### Prerequisites
 - Python 3.8 or higher
 - pip (Python package manager)
 
@@ -68,24 +84,8 @@ Assignment/
     └── doc10.txt
 ```
 
-## How to Take Screenshots for Submission
+After running the app (`streamlit run app.py`) , open browser → Navigate to http://localhost:8501
 
-After running the app (`streamlit run app.py`), take screenshots of each section:
-
-1. **Open browser** → Navigate to http://localhost:8501
-2. **Section A** → Click "Load Sample Documents" → Screenshot the document list
-3. **Section B** → Select doc01.txt → Screenshot preprocessing output + inverted index table
-4. **Section C** → Enter "information retrieval systems" → Screenshot comparison table + cosine scores
-5. **Section D** → Select "information retrieval system" → Screenshot both index results + analysis
-6. **Section E** → Use default queries → Screenshot experimental results table + summary
-7. **Section F** → Screenshot each tab (Wildcard, Spelling, Edit Distance Matrix, K-gram, Soundex)
-8. **Section G** → Screenshot the inference & discussion page
-
-### Screenshot Tips:
-- Use full browser width for tables
-- Scroll and capture each section completely
-- On macOS: `Cmd+Shift+4` to select area, or `Cmd+Shift+3` for full screen
-- On Windows: `Win+Shift+S` for Snipping Tool
 
 ## Dependencies
 - `streamlit` — Web application framework
